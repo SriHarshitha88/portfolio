@@ -103,15 +103,6 @@ const syncScrollMotion = () => {
     contact.classList.toggle("is-typing", inView);
   }
 
-  if (details) {
-    const rect = details.getBoundingClientRect();
-    const inView = rect.top < window.innerHeight * 0.66 && rect.bottom > window.innerHeight * 0.28;
-    details.classList.toggle("is-settled", inView);
-    if (!inView) {
-      details.classList.remove("is-hovering");
-    }
-  }
-
   if (projectCards.length) {
     const stickyTop = Math.min(138, window.innerHeight * 0.18);
     projectCards.forEach((card, index) => {

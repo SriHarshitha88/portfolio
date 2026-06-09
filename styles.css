@@ -858,42 +858,32 @@ body.is-loaded .scroll-rail {
   border-radius: 14px;
   padding: clamp(26px, 3vw, 38px);
   background: rgba(16, 16, 15, 0.52);
-  opacity: 0;
-  filter: blur(5px);
-  transform:
-    translate3d(var(--detail-start, -180px), 42px, 0)
-    rotate(var(--detail-rotate, -5deg))
-    scale(0.94);
+  opacity: 1;
+  filter: none;
+  transform: none;
   transition:
-    opacity 1250ms cubic-bezier(.16, 1, .2, 1),
-    transform 1450ms cubic-bezier(.16, 1, .2, 1),
-    filter 1250ms cubic-bezier(.16, 1, .2, 1),
     border-color 220ms ease,
     background 220ms ease;
 }
 
 .detail:nth-child(2) {
-  --detail-start: 0;
-  --detail-rotate: 4deg;
-  transition-delay: 420ms;
+  transition-delay: 0ms;
 }
 
 .detail:nth-child(3) {
-  --detail-start: 180px;
-  --detail-rotate: -4deg;
-  transition-delay: 840ms;
+  transition-delay: 0ms;
 }
 
 .details.is-settled .detail {
   opacity: 1;
   filter: blur(0);
-  transform: translate3d(0, 0, 0) rotate(0);
+  transform: none;
 }
 
 .detail:hover {
   border-color: rgba(255, 48, 45, 0.42);
   background: rgba(18, 18, 17, 0.86);
-  transform: translateY(-3px);
+  transform: none;
 }
 
 .detail h3 {
